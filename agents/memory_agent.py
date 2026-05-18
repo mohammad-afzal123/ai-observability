@@ -3,6 +3,7 @@ import pandas as pd
 from services.prometheus_client import query_prometheus
 from services.anomaly_detector import detect_anomalies
 
+
 def analyze_memory():
 
     query = 'container_memory_usage_bytes'
