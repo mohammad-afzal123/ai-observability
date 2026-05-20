@@ -18,11 +18,13 @@ def analyze_cpu():
     for item in data:
 
         pod = item["metric"].get("pod", "unknown")
+        namespace = item["metric"].get("namespace", "default")
 
         value = float(item["value"][1])
 
         rows.append({
             "pod": pod,
+            "namespace": namespace,
             "value": value
         })
 
@@ -47,6 +49,7 @@ def analyze_cpu():
 
         results.append({
             "pod": row["pod"],
+            "namespace": row["namespace"],
             "value": row["value"],
             "anomaly": int(row["anomaly"]),
             "insight": insight

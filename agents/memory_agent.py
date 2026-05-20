@@ -17,11 +17,13 @@ def analyze_memory():
     for item in data:
 
         pod = item["metric"].get("pod", "unknown")
+        namespace = item["metric"].get("namespace", "default")
 
         value = float(item["value"][1])
 
         rows.append({
             "pod": pod,
+            "namespace": namespace,
             "value": value
         })
 
