@@ -35,21 +35,7 @@ This project was built using:
 
 # System Architecture
 
-```text
-Kubernetes Cluster
-        ↓
-Prometheus Metrics Pipeline
-        ↓
-FastAPI AI Backend
-        ↓
-CPU AI Agent
-        ↓
-Anomaly Detection Engine
-        ↓
-NLP Insight Generation
-        ↓
-REST API Output
-```
+![alt text](image.png)
 
 ---
 
